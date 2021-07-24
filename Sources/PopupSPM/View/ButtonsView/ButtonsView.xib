@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonsView" customModule="TastUI" customModuleProvider="target">
+            <connections>
+                <outlet property="leftButton" destination="F2f-8M-eoX" id="1KG-4Y-3u4"/>
+                <outlet property="rightButton" destination="NYm-pU-8SF" id="JIy-uG-Vhy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="638" height="68"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="OQ6-Gs-eFa">
+                    <rect key="frame" x="10" y="10" width="618" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2f-8M-eoX">
+                            <rect key="frame" x="0.0" y="0.0" width="304.5" height="48"/>
+                            <color key="backgroundColor" red="1" green="0.21789466029999999" blue="0.17363742930000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="didPressLeftButton:" destination="-1" eventType="touchUpInside" id="pQl-BV-i6H"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYm-pU-8SF">
+                            <rect key="frame" x="313.5" y="0.0" width="304.5" height="48"/>
+                            <color key="backgroundColor" red="1" green="0.21789466029999999" blue="0.17363742930000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="didPressRightButton:" destination="-1" eventType="touchUpInside" id="YWV-ja-EM7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OQ6-Gs-eFa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="WgH-fe-4LH"/>
+                <constraint firstAttribute="trailing" secondItem="OQ6-Gs-eFa" secondAttribute="trailing" constant="10" id="jDf-80-jmC"/>
+                <constraint firstAttribute="bottom" secondItem="OQ6-Gs-eFa" secondAttribute="bottom" constant="10" id="snB-he-LeT"/>
+                <constraint firstItem="OQ6-Gs-eFa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zQs-Rj-vv3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="244.92753623188409" y="387.72321428571428"/>
+        </view>
+    </objects>
+</document>
