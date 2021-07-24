@@ -26,6 +26,7 @@ public class PopupView: NibOwner {
     
     override init() {
         super.init()
+        backgroundColor = .white
     }
 
     required init?(coder: NSCoder) {
