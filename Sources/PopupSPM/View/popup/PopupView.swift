@@ -31,6 +31,10 @@ public class PopupView: NibOwner {
     required init?(coder: NSCoder) {
         fatalError()
     }
+
+    @IBAction func dismiss() {
+        removeFromSuperview()
+    }
 }
 
 extension PopupView: ButtonsViewdelegate {

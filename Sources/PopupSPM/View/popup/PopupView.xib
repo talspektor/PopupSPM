@@ -49,15 +49,27 @@
                         <constraint firstAttribute="width" constant="300" id="MSb-cJ-3xF"/>
                     </constraints>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiN-21-dQU">
+                    <rect key="frame" x="24" y="24" width="17.5" height="22"/>
+                    <state key="normal" image="pencil.slash" catalog="system"/>
+                    <connections>
+                        <action selector="dismiss" destination="-1" eventType="touchUpInside" id="9hI-4W-Lxw"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="OiN-21-dQU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="PJT-OY-1Ep"/>
                 <constraint firstItem="dvZ-1g-bmP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WQq-wv-mD6"/>
                 <constraint firstItem="dvZ-1g-bmP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kzZ-qf-6P4"/>
+                <constraint firstItem="OiN-21-dQU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="nO8-dE-I2E"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="157.97101449275362" y="168.75"/>
         </view>
     </objects>
+    <resources>
+        <image name="pencil.slash" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
