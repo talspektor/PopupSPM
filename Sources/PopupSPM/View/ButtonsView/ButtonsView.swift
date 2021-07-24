@@ -43,10 +43,10 @@ class ButtonsView: NibOwner {
     }
 
     @IBAction func didPressRightButton(_ sender: Any) {
-
+        print("right button")
     }
 
     @IBAction func didPressLeftButton(_ sender: Any) {
-
+        print("left button")
     }
 }
