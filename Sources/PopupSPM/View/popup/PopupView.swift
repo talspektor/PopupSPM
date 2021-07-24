@@ -11,7 +11,7 @@ public class PopupView: NibOwner {
 
     @IBOutlet weak var buttonsView: ButtonsView!
     
-    override init() {
+    override public init() {
         super.init()
         hideButton()
     }
