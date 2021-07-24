@@ -15,12 +15,17 @@ public protocol PopupViewDelegate: AnyObject {
 public class PopupView: NibOwner {
 
     public weak var delegate: PopupViewDelegate!
-    
+
     @IBOutlet weak var buttonsView: ButtonsView!
+
+    convenience init(delegate: PopupViewDelegate) {
+        self.init()
+        self.delegate = delegate
+        buttonsView.delegate = self
+    }
     
     override public init() {
         super.init()
-        buttonsView.delegate = self
     }
 
     required init?(coder: NSCoder) {
