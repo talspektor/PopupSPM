@@ -18,13 +18,13 @@ public class PopupView: NibOwner {
 
     @IBOutlet weak var buttonsView: ButtonsView!
 
-    convenience init(delegate: PopupViewDelegate) {
+    convenience public init(delegate: PopupViewDelegate) {
         self.init()
         self.delegate = delegate
         buttonsView.delegate = self
     }
     
-    override public init() {
+    override init() {
         super.init()
     }
 
