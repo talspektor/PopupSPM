@@ -7,39 +7,33 @@
 
 import UIKit
 
+public protocol PopupViewDelegate: AnyObject {
+    var isRightButtonHidden: Bool { get }
+    var isLeftButtonHidden: Bool { get }
+}
+
 public class PopupView: NibOwner {
 
+    public weak var delegate: PopupViewDelegate!
+    
     @IBOutlet weak var buttonsView: ButtonsView!
     
     override public init() {
         super.init()
-        hideButton()
+        buttonsView.delegate = self
     }
 
     required init?(coder: NSCoder) {
         fatalError()
     }
+}
 
-    private func hideButton() {
-        buttonsView.hide()
+extension PopupView: ButtonsViewdelegate {
+    var isRightButtonHidden: Bool {
+        delegate.isRightButtonHidden
     }
 
-}
-extension UIView {
-
-    @discardableResult
-    func fromNib<T : UIView>() -> T? {
-        guard let contentView = Bundle.module.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? T else {
-            return nil
-        }
-        self.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-        return contentView
+    var isLeftButtonHidden: Bool {
+        delegate.isLeftButtonHidden
     }
 }

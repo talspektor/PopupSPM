@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol ButtonsViewdelegate: AnyObject {
+    var isRightButtonHidden: Bool { get }
+    var isLeftButtonHidden: Bool { get }
+}
+
 class ButtonsView: NibOwner {
+
+    public weak var  delegate: ButtonsViewdelegate! {
+        didSet {
+            rightButton.isHidden = delegate.isRightButtonHidden
+            leftButton.isHidden = delegate.isLeftButtonHidden
+        }
+    }
     
     @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var rightButton: UIButton!
@@ -28,10 +40,6 @@ class ButtonsView: NibOwner {
 
         rightButton.clipsToBounds = true
         rightButton.layer.cornerRadius = 5
-    }
-
-    public func hide() {
-        leftButton.isHidden = true
     }
 
     @IBAction func didPressRightButton(_ sender: Any) {
