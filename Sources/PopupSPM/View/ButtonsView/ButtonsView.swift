@@ -40,6 +40,9 @@ class ButtonsView: NibOwner {
 
         rightButton.clipsToBounds = true
         rightButton.layer.cornerRadius = 5
+
+        rightButton.applyGradient(colours: [.red, .blue])
+        leftButton.applyGradient(colours: [.blue, .red])
     }
 
     @IBAction func didPressRightButton(_ sender: Any) {
