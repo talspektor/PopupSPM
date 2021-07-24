@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PopupView: NibOwner {
+public class PopupView: NibOwner {
 
     @IBOutlet weak var buttonsView: ButtonsView!
     

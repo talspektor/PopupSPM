@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NibOwner: UIView {
+public class NibOwner: UIView {
 
     init() {
         super.init(frame: .zero)
