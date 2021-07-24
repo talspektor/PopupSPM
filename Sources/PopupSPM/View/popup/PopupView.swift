@@ -13,7 +13,7 @@ public class PopupView: NibOwner {
     
     override public init() {
         super.init()
-        hideButton()
+//        hideButton()
     }
 
     required init?(coder: NSCoder) {
