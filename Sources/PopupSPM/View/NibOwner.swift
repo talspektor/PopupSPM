@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol Nibable {
-    
-}
-
-extension Nibable where Self: UIView {
+public class Nibable: UIView {
     init() {
-        self.init()
+        super.init(frame: .zero)
         fromNib()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

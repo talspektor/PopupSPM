@@ -12,7 +12,7 @@ protocol ButtonsViewdelegate: AnyObject {
     var isLeftButtonHidden: Bool { get }
 }
 
-class ButtonsView: UIView, Nibable {
+class ButtonsView: Nibable {
 
     public weak var  delegate: ButtonsViewdelegate! {
         didSet {
@@ -23,9 +23,9 @@ class ButtonsView: UIView, Nibable {
     
     @IBOutlet private weak var leftButton: UIButton!
     @IBOutlet private weak var rightButton: UIButton!
-
-    convenience init() {
-        self.init()
+    
+    override init() {
+        super.init()
         roundCorners()
     }
 
