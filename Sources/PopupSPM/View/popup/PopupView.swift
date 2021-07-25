@@ -27,6 +27,7 @@ public class PopupView: Nibable {
     override init() {
         super.init()
         backgroundColor = .white
+        setButtonsColor()
     }
 
     required init?(coder: NSCoder) {
