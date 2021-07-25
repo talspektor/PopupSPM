@@ -7,15 +7,13 @@
 
 import UIKit
 
-public class NibOwner: UIView {
+protocol Nibable {
+    
+}
 
-    public init() {
-        super.init(frame: .zero)
-        fromNib()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+extension Nibable where Self: UIView {
+    init() {
+        self.init()
         fromNib()
     }
 }

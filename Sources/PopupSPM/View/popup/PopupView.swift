@@ -12,7 +12,7 @@ public protocol PopupViewDelegate: AnyObject {
     var isLeftButtonHidden: Bool { get }
 }
 
-public class PopupView: NibOwner {
+public class PopupView: UIView, Nibable {
 
     public weak var delegate: PopupViewDelegate!
 
@@ -24,8 +24,8 @@ public class PopupView: NibOwner {
         buttonsView.delegate = self
     }
     
-    override init() {
-        super.init()
+    convenience init() {
+        self.init()
         backgroundColor = .white
     }
 
