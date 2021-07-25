@@ -32,6 +32,11 @@ public class PopupView: Nibable {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    private func setButtonsColor() {
+        buttonsView.setLeftButtonColor(colors: [.green, .blue])
+        buttonsView.setRightButtonColor(colors: [.blue, .green])
+    }
 
     @IBAction func dismiss() {
         removeFromSuperview()

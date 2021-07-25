@@ -41,8 +41,16 @@ class ButtonsView: Nibable {
         rightButton.clipsToBounds = true
         rightButton.layer.cornerRadius = 5
 
-        rightButton.applyGradient(colours: [.red, .blue])
-        leftButton.applyGradient(colours: [.blue, .red])
+//        rightButton.applyGradient(colours: [.red, .blue])
+//        leftButton.applyGradient(colours: [.blue, .red])
+    }
+    
+    public func setLeftButtonColor(colors: [UIColor]) {
+        leftButton.applyGradient(colours: colors)
+    }
+    
+    public func setRightButtonColor(colors: [UIColor]) {
+        rightButton.applyGradient(colours: colors)
     }
 
     @IBAction func didPressRightButton(_ sender: Any) {
